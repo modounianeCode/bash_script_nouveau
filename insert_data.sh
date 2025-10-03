@@ -26,6 +26,10 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
    then
    #insert course
    INSERT_COURSE_RESULT=$($PSQL "insert into courses(course) values ('$COURSE')")
+   if [[ $INSERT_COURSE_RESULT == "INSERT 0 1" ]]
+ then
+ echo "Inserted into courses, $COURSE"
+ fi
    #get new course_id
    fi
 #insert into majors_courses
