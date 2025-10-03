@@ -35,5 +35,6 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
     COURSE_ID=$($PSQL "select course_id from courses where course='$COURSE'")
   fi
 #insert into majors_courses
+INSERT_MAJORS_COURSES_RESULT=$($PSQL "insert into majors_courses(major_id,course_id) values($MAJOR_ID,$COURSE_ID)")
 fi
 done
