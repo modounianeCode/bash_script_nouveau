@@ -44,5 +44,7 @@ fi
 done
 cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA 
 do
-
+if [[ $FIRST != first_name ]]
+then
+fi
 done
