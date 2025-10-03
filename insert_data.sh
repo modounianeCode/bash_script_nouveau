@@ -48,13 +48,14 @@ if [[ $FIRST != "first_name" ]]
   then
     # get major_id
      MAJOR_ID=$($PSQL "select major_id from majors where major='$MAJOR'")
-     echo $MAJOR_ID
     # if not found
 if [[ -z $MAJOR_ID ]]
 then
 #set to null
 MAJOR_ID=null
 fi
+  echo $MAJOR_ID
+
     # set to null
 
     # insert student
