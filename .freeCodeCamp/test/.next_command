@@ -193,3 +193,8 @@ ls --color=auto
 rm students_test.csv
 rm courses_test.csv
 git add .
+git status
+git log
+git commit -m"yes we did it"
+git push
+ls --color=auto
