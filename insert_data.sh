@@ -25,6 +25,7 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
    if [[ -z $COURSE_ID ]]
    then
    #insert course
+   INSERT_COURSE_RESULT=$($PSQL "insert into courses(course) values ('$COURSE')")
    #get new course_id
    fi
 #insert into majors_courses
