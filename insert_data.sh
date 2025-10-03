@@ -58,6 +58,6 @@ fi
     # set to null
 
     # insert student
-
+    INSERT_STUDENT_RESULT=$($PSQL "insert into students(first_name,last_name,major_id,gpa) values ('$FIRST','$LAST',$MAJOR_ID,$GPA)")
   fi
 done
