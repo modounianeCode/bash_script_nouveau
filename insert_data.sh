@@ -32,7 +32,8 @@ MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")
  echo "Inserted into courses, $COURSE"
  fi
    #get new course_id
-   fi
+    COURSE_ID=$($PSQL "select course_id from courses where course='$COURSE'")
+  fi
 #insert into majors_courses
 fi
 done
